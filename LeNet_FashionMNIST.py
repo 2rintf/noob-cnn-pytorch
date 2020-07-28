@@ -169,5 +169,4 @@ with torch.no_grad():
         _, predicted = torch.max(outputs.data, 1)
         total += labels.size(0)
         correct += (predicted == labels.cuda()).sum().item() # item() -> Tensor转标量
-
-print('FINAL | Test dataset accuracy: %.3f %%' % (100 * correct / total))
+    print('FINAL | Test dataset accuracy: %.3f %%' % (100 * correct / total))
