@@ -141,8 +141,6 @@ for epoch in range(EPOCH):  # loop over the dataset multiple times
         if i % 50 == 0:
             print('[%d, %5d] loss: %.3f' % (epoch + 1, i + 1, running_loss / 50))
             running_loss = 0.0
-
-writer.close()
 print('Finished Training')
 
 # torch.save(net.state_dict(),"./FM_lenet_20E_32B_2LR.pth")
