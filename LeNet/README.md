@@ -22,7 +22,7 @@
 
 
 - ### CIFAR-10  
-    Firstly, I want to say that `LeNet`'s performance on `CIFAR-10` is NOT really good. The highest accuracy I get is `63%`. By the way , some guys got 67% accuracy on their LeNet. 🤪
+    Firstly, I want to say that `LeNet`'s performance on `CIFAR-10` is **NOT** really good. The highest accuracy I get is `63%`. By the way , some guys got 67% accuracy on their LeNet. 🤪
 1. Exp1
     - Parameters
         ```
