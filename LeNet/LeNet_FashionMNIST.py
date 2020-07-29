@@ -58,7 +58,7 @@ net = CNN()
 print(net)
 net.to(device)
 optimizer = torch.optim.Adam(net.parameters(),LR)
-loss_func = nn.CrossEntropyLoss()
+loss_func = nn.CrossEntropyLoss().to(device)
 
 
 # data preprocess
