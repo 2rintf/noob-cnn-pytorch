@@ -1,20 +1,24 @@
 # LeNet-5
 
+## Net Architectures
+
+
 ## Result
 - ### FashionMNIST
     - Parameters
         ```
-        Epoch = 20
+        Epoch = 50
         BatchSize = 32
-        LearingRate = 0.001  (<10 Epoch)
-                    = 0.0003 (>=10 Epoch)
+        LearingRate = 0.001 
         ```
     - Result
         ```
-        train_acc = %
-         test_acc = %
+        train_acc = 97.492%
+         test_acc = 88.520%
         ```
-    - Graph
+    - Graph  
+    <img src="./pic/fm_acc_exp1.png" style="zoom:50%"/>
+    <img src="./pic/fm_loss_exp1.png" style="zoom:50%"/>
 
 
 - ### CIFAR-10  
@@ -31,21 +35,17 @@
         train_acc = 81%
          test_acc = 59%
         ```
-    - Graph  
-    1. Accuracy of train dataset & test dataset.  
-    <img src="./pic/cf_acc_exp1.jpg" style="zoom:70%"/>
-
-    2. Loss.  
-    <img src="./pic/cf_loss_exp1.jpg" style="zoom:70%"/>  
+    - Graph   
+    <img src="./pic/cf_acc_exp1.jpg" style="zoom:50%"/>
+    <img src="./pic/cf_loss_exp1.jpg" style="zoom:50%"/>  
       
 
     > Bad performance on test dataset. Maybe **overfitting**.  
     > There are some ways that could be used to improve the performance:
     >   1. Change param.  
     > eg. Let `Learning Rate` become `dynamic Learning Rate` ; Increase `Epoch` and ...  
-    >   2. Improve our Net. eg. `Regularization` ; `Batch Normalization` and ...
-    >  
-    > 
+    >   2. Improve our Net. eg. `Regularization` ; `Batch Normalization` and ...  
+    >   
     > Going to show some results of these ways on next experiments.
 
 2. Exp2  
