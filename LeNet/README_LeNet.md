@@ -25,7 +25,14 @@
     <img src="./cf_acc_exp1.jpg" style="zoom:70%"/>
 
     2. Loss.  
-    <img src="./cf_loss_exp1.jpg" style="zoom:70%"/>
+    <img src="./cf_loss_exp1.jpg" style="zoom:70%"/>  
+      
+
+    > Bad performance on test dataset. Maybe **overfitting**.  
+    > Two ways to try to improve the performance:
+    >   1. Change `Learning Rate` to `dynamic Learning Rate`. & Increase `Epoch`.  
+    >   2. Improve our LeNet-5. eg. `Regularization` & `Batch Normalization`.
+    > Going to show results of these ways on Exp2 and Exp3.
 
 
 
