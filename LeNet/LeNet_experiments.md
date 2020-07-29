@@ -13,7 +13,7 @@
 
 
 - ### CIFAR-10
-    1. Exp1
+1. Exp1
     - Parameters
         ```
         Epoch = 50
@@ -26,7 +26,7 @@
 
     2. Loss.  
     <img src="./cf_loss_exp1.jpg" style="zoom:70%"/>
-    
+
 
 
 
