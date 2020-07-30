@@ -10,17 +10,17 @@ import matplotlib.pyplot as plt
 
 
 ##############By 2rintf###############
-#! LeNet-5 on FashionMNIST.  [EXP1]  #
-#! Activation Function: ReLU         #
+#! LeNet-5 on CIFAR10.  [EXP4]       #
+#! Activation Function: LeakyReLU    #
 #! Optimizer: Adam.                  #
 #! Loss func: Cross-Entropy.         #
-#! Result: Train_accuracy = 97.492%  #
-#           Test_accuracy = 88.520%  #
+#! Result: Train_accuracy = 91.682%  #
+#           Test_accuracy = 58.120%  #
 ######################################
 
 
 # save path
-network_save_path = "./fm_lenet_50E_32B_1LR.pth"
+network_save_path = "./cf_lenet_50E_32B_1LR.pth"
 graph_save_path = "./result_pic/"
 
 # draw plot
@@ -43,7 +43,7 @@ class CNN(nn.Module):
     def __init__(self):
         super(CNN, self).__init__()
         self.conv1 = nn.Sequential(
-            nn.Conv2d(1,6,5,1,0),
+            nn.Conv2d(3,6,5,1,0),
             nn.LeakyReLU(),
             nn.MaxPool2d(2,2)
         )
@@ -53,7 +53,7 @@ class CNN(nn.Module):
             nn.MaxPool2d(2,2)
         )
         self.out = nn.Sequential(
-            nn.Linear(4*4*16,120),
+            nn.Linear(5*5*16,120),
             nn.LeakyReLU(),
             nn.Linear(120,84),
             nn.LeakyReLU(),
@@ -62,8 +62,8 @@ class CNN(nn.Module):
 
     def forward(self,x):
         x = self.conv1(x)
-        x = self.conv2(x)         # -> (batch, 16, 4, 4)
-        x = x.view(x.size(0),-1)  # flatern 展平 (batch,4*4*16)
+        x = self.conv2(x)         # -> (batch, 16, 5, 5)
+        x = x.view(x.size(0),-1)  # flatern 展平 (batch,5*5*16)
         output = self.out(x)
         return output
 
@@ -207,17 +207,19 @@ x3 = real_loss_step # batch_size 和 train_dataset_size 不是整数倍
 y1 = train_set_acc
 y2 = test_set_acc
 y3 = loss_val
-plt.title("LeNet-FashionMNIST-dataset_accuracy")
+
+plt.title("LeNet-CIFAR10-dataset_accuracy")
 plt.plot(x1,y1,'o-b',label='train_acc')
 plt.plot(x2,y2,'o-r',label='test_acc')
 plt.legend()
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
-plt.savefig(graph_save_path+"fm_lenet_acc.png")
+plt.savefig(graph_save_path+"cf_lenet_leaky_relu_acc.png")
 plt.cla()
 
-plt.title("LeNet-FashionMNIST-Loss")
+
+plt.title("LeNet-CIFAR10-Loss")
 plt.plot(x3,y3,'o-y',label='loss')
 plt.xlabel('Step')
 plt.ylabel('Loss')
-plt.savefig(graph_save_path+"fm_lenet_loss.png")
+plt.savefig(graph_save_path+"cf_lenet_leaky_relu_loss.png")

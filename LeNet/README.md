@@ -1,8 +1,5 @@
 # LeNet-5
 
-## Net Architectures
-
-
 ## Result
 - ### FashionMNIST
     - Parameters
@@ -44,7 +41,8 @@
     > There are some ways that could be used to improve the performance:
     >   1. Change param.  
     > eg. Let `Learning Rate` become `dynamic Learning Rate` ; Increase `Epoch` and ...  
-    >   2. Improve our Net. eg. `Regularization` ; `Batch Normalization` and ...  
+    >   2. Improve our Net.   
+    eg. `Regularization` ; `Batch Normalization` and ...  
     >   
     > Going to show some results of these ways on next experiments.
 
@@ -68,7 +66,7 @@
     <img src="./pic/cf_acc_exp2.png" width = "320"/>
     <img src="./pic/cf_loss_exp2.png" width = "320"/>
 
-    > 🙄It seems that `dynamic Learing Rate` accelerates the decline of `loss`, just like the pic shows (on about 23000th Steps, there is a **sharp** decline). 
+    > 🙄It seems that `dynamic Learing Rate` accelerates the decline of `loss`, just like what the pic shows (on about 23000th step, there is a **sharp** decline). 
 
 3. Exp3  
     Change param such as `BatchSize` & `Epoch`.  
