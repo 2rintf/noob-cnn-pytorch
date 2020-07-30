@@ -17,8 +17,8 @@
          test_acc = 88.520%
         ```
     - Graph  
-    <img src="./pic/fm_acc_exp1.png" style="zoom:50%"/>
-    <img src="./pic/fm_loss_exp1.png" style="zoom:50%"/>
+    <img src="./pic/fm_acc_exp1.png" width = "320"/>
+    <img src="./pic/fm_loss_exp1.png" width = "320"/>
 
 
 - ### CIFAR-10  
@@ -36,8 +36,8 @@
          test_acc = 59%
         ```
     - Graph   
-    <img src="./pic/cf_acc_exp1.jpg" style="zoom:50%"/>
-    <img src="./pic/cf_loss_exp1.jpg" style="zoom:50%"/>  
+    <img src="./pic/cf_acc_exp1.jpg" width = "320"/>
+    <img src="./pic/cf_loss_exp1.jpg" width = "320"/>  
       
 
     > 🤨Bad performance on test dataset. Maybe **overfitting**.  
@@ -65,8 +65,8 @@
          test_acc = 63.250%
         ```
     - Graph   
-    <img src="./pic/cf_acc_exp2.png" style="zoom:50%"/>
-    <img src="./pic/cf_loss_exp2.png" style="zoom:50%"/>
+    <img src="./pic/cf_acc_exp2.png" width = "320"/>
+    <img src="./pic/cf_loss_exp2.png" width = "320"/>
 
     > It seems that `dynamic Learing Rate` accelerates the decline of `loss`, just like the pic shows (on about 23000th Steps, there is a sharp decline). 
 
@@ -85,8 +85,8 @@
          test_acc = 62.580%
         ```
     - Graph  
-    <img src="./pic/cf_acc_exp3.png" style="zoom:50%"/>
-    <img src="./pic/cf_loss_exp3.png" style="zoom:50%"/>
+    <img src="./pic/cf_acc_exp3.png" width = "320"/>
+    <img src="./pic/cf_loss_exp3.png" width = "320"/>
 
 4. Exp4  
     After watching many kinds of training, I try to replace `ReLu` with `LeakyReLu`, which improve the accuracy of train dataset into `91%` but still bad performance on test dataset. 🙄Just for fun.
