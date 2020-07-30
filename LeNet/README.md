@@ -40,7 +40,7 @@
     <img src="./pic/cf_loss_exp1.jpg" style="zoom:50%"/>  
       
 
-    > Bad performance on test dataset. Maybe **overfitting**.  
+    > 🤨Bad performance on test dataset. Maybe **overfitting**.  
     > There are some ways that could be used to improve the performance:
     >   1. Change param.  
     > eg. Let `Learning Rate` become `dynamic Learning Rate` ; Increase `Epoch` and ...  
@@ -72,7 +72,7 @@
 
 3. Exp3  
     Change param such as `BatchSize` & `Epoch`.  
-    In this case, I think more `Epoch` and bigger `BatchSize` are meaningless, but I still make a expriment about bigger `BatchSize`.
+    In this case, I think more `Epoch` and bigger `BatchSize` are meaningless, but I still make a experiment about bigger `BatchSize`.
     - Parameters
         ```
         Epoch = 50
@@ -87,6 +87,18 @@
     - Graph  
     <img src="./pic/cf_acc_exp3.png" style="zoom:50%"/>
     <img src="./pic/cf_loss_exp3.png" style="zoom:50%"/>
+
+4. Exp4  
+    After watching many kinds of training, I try to replace `ReLu` with `LeakyReLu`, which improve the accuracy of train dataset into `91%` but still bad performance on test dataset. 🙄Just for fun.
+    - Parameters *(Same as Exp1, only replace `ReLu` with `Leaky ReLu`)*
+    - Result
+        ```
+        train_acc = 91.682% (about 10% improvement than Exp1)
+         test_acc = 58.120%
+        ```
+    - Graph  
+    <img src="./pic/leaky_relu_acc.png" style="zoom:30%"/>
+    <img src="./pic/leaky_relu_loss.png" style="zoom:30%"/>
 
 
 
