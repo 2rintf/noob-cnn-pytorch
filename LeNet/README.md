@@ -97,8 +97,8 @@
          test_acc = 58.120%
         ```
     - Graph  
-    <img src="./pic/leaky_relu_acc.png" style="zoom:30%"/>
-    <img src="./pic/leaky_relu_loss.png" style="zoom:30%"/>
+    <img src="./pic/leaky_relu_acc.png" width = "320"/>
+    <img src="./pic/leaky_relu_loss.png" width= "320"/>
 
 
 
