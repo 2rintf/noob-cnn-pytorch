@@ -68,7 +68,7 @@
     <img src="./pic/cf_acc_exp2.png" width = "320"/>
     <img src="./pic/cf_loss_exp2.png" width = "320"/>
 
-    > It seems that `dynamic Learing Rate` accelerates the decline of `loss`, just like the pic shows (on about 23000th Steps, there is a sharp decline). 
+    > 🙄It seems that `dynamic Learing Rate` accelerates the decline of `loss`, just like the pic shows (on about 23000th Steps, there is a **sharp** decline). 
 
 3. Exp3  
     Change param such as `BatchSize` & `Epoch`.  
